@@ -40,4 +40,43 @@ A modern, full-stack web platform to help students manage stress, improve study 
 ---
 
 ## 📦 Project Structure
+student-support-hub/
+├── public/                     # Frontend static files (served by Express)
+│   ├── index.html              # Home page
+│   ├── forum.html              # Anonymous forum
+│   ├── study-tools.html        # Study section
+│   ├── mental-health.html      # Mental health section
+│   ├── financial.html          # Financial help section
+│   ├── contact.html            # Contact form
+│   ├── css/
+│   │   └── styles.css          # All styling (light/dark mode, mobile)
+│   └── js/
+│       ├── main.js             # Common logic (toggle theme, nav, etc.)
+│       ├── forum.js            # Handles forum post rendering
+│       ├── study-tools.js      # Flashcards, timers, etc.
+│       └── firebase.js         # Firebase SDK config
+│
+├── server.js                   # Express server setup
+├── routes/                     # API endpoints
+│   └── comments.js             # /api/comments CRUD routes
+├── models/                     # Mongoose schemas
+│   └── Comment.js              # Comment schema
+├── firebaseConfig.js           # Firebase initialization and admin SDK
+├── utils/
+│   └── authMiddleware.js       # Auth check, admin check
+│
+├── .env                        # Environment variables (Mongo URI, Firebase key)
+├── package.json
+└── README.md
+
+
+🔄 Ready for Deployment:
+🟢 Frontend static files served by Express
+
+🌐 Backend API can be hosted on Render, Railway, etc.
+
+🔥 Firebase handles Auth + realtime sync
+
+🛠️ MongoDB stores forum data permanently
+
 
