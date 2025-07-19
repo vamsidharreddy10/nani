@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Support - CampusCare Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Student Support Hub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mental-health.html">Mental Health</a></li>
+      <li><a href="financial.html">Financial Help</a></li>
+      <li><a href="#">Study Tools</a></li>
+      <li><a href="#">Forums</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 💸 Saving Tips -->
+  <section class="section-box">
+    <h2>💡 Money-Saving Tips for Students</h2>
+    <ul class="tips-list">
+      <li>📘 Buy used books or borrow from library</li>
+      <li>💻 Use free academic software alternatives</li>
+      <li>🍝 Cook meals instead of eating out</li>
+      <li>🚌 Use public transport or student discounts</li>
+      <li>🧾 Track your expenses with budgeting apps</li>
+    </ul>
+  </section>
+  <section class="section-box">
+  <h2>🤝 Student Project Collaboration Board</h2>
+ 
+  <!-- Filter Controls -->
+  <div class="filter-controls">
+    <button data-status="all">All</button>
+    <button data-status="pending">Pending</button>
+    <button data-status="approved">Approved</button>
+    <button data-status="rejected">Rejected</button>
+  </div>
+
+  <!-- Project List -->
+  <div class="project-list" id="projectList"></div>
+</section>
+
+
+  <!-- 🤝 Project Collaboration -->
+  <section class="section-box">
+    <h2>🤝 Student Project Collaboration Board</h2>
+    <form id="projectForm">
+      <input type="text" id="projectName" placeholder="Project Title" required />
+      <input type="text" id="assignedTo" placeholder="Assigned to (Student Name)" required />
+      <button type="submit">Assign Project</button>
+    </form>
+    <div class="project-list" id="projectList"></div>
+  </section>
+
+  <!-- 🏆 Scholarships -->
+  <section class="section-box">
+    <h2>🏆 Scholarships for Outstanding Students</h2>
+    <ul class="scholarship-list">
+      <li>🎓 Academic Excellence Award – $2,000</li>
+      <li>💼 Leadership Scholarship – $1,500</li>
+      <li>🌍 Community Builder Grant – $1,000</li>
+      <li>🧠 Innovation in Tech Prize – $2,500</li>
+    </ul>
+  </section>
+  <section class="section-box">
+    <h2>🎓 Apply for a Scholarship</h2>
+    <form id="scholarshipForm">
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <select required>
+        <option value="">Select Scholarship</option>
+        <option>Academic Excellence</option>
+        <option>Leadership Scholarship</option>
+        <option>Community Builder</option>
+        <option>Innovation in Tech</option>
+      </select>
+      <textarea rows="4" placeholder="Why are you applying?" required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+  <section class="section-box" id="scholarshipTest">
+    <h2>🧠 Scholarship Entrance Test</h2>
+    <form id="testForm">
+      <div class="test-question">
+        <p>1. What’s the best way to save as a student?</p>
+        <label><input type="radio" name="q1" value="a" required /> Always eat outside</label><br />
+        <label><input type="radio" name="q1" value="b" /> Budget monthly and track spending</label><br />
+        <label><input type="radio" name="q1" value="c" /> Buy everything new</label>
+      </div>
+  
+      <div class="test-question">
+        <p>2. What does GPA stand for?</p>
+        <label><input type="radio" name="q2" value="a" required /> General Paper Analysis</label><br />
+        <label><input type="radio" name="q2" value="b" /> Great Points Average</label><br />
+        <label><input type="radio" name="q2" value="c" /> Grade Point Average</label>
+      </div>
+  
+      <div class="test-question">
+        <p>3. What's a good practice before exams?</p>
+        <label><input type="radio" name="q3" value="a" required /> Sleep well and review notes</label><br />
+        <label><input type="radio" name="q3" value="b" /> Watch Netflix all night</label><br />
+        <label><input type="radio" name="q3" value="c" /> Skip all meals</label>
+      </div>
+  
+      <button type="submit">Submit Test</button>
+    </form>
+    <div id="testResult"></div>
+  </section>
+
+
+
+  <script src="financial.js"></script>
+</body>
+</html>
+<style>
+  body {
+     font: optional;
+     background-color: rgb(218, 170, 170);
+     color: #eee;
+  }
+  
+/* Navbar */
+.navbar {
+  background-color: #96baf3;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  /* Section tips */
+.tips-list, .scholarship-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.tips-list li, .scholarship-list li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Project Form */
+#projectForm {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#projectForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#projectForm button {
+  background-color: #234375;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.project-list {
+  margin-top: 20px;
+  background: #f0f8ff;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.project-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: white;
+  border-left: 5px solid #2e6bd9;
+  border-radius: 4px;
+}
+/* Filter Buttons */
+.filter-controls {
+  margin: 15px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-controls button {
+  padding: 8px 12px;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-controls button:hover {
+  background-color: #d0e6ff;
+}
+
+/* Status Colors */
+.project-item[data-status="pending"] {
+  border-left: 5px solid orange;
+}
+
+.project-item[data-status="approved"] {
+  border-left: 5px solid green;
+}
+
+.project-item[data-status="rejected"] {
+  border-left: 5px solid red;
+}
+
+.project-item .admin-controls {
+  margin-top: 8px;
+}
+
+.project-item button {
+  margin-right: 8px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+/* Scholarship Form */
+#scholarshipForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#scholarshipForm input,
+#scholarshipForm select,
+#scholarshipForm textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.test-question {
+  margin-bottom: 20px;
+}
+
+.test-question p {
+  font-weight: bold;
+}
+
+#testResult {
+  margin-top: 20px;
+  padding: 15px;
+  background: #eef7ff;
+  border-left: 5px solid #234375;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+</style>

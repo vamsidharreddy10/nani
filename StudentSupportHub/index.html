@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudentSupportHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo nextgen.png" alt="Student Support Hub Logo" 
+      class="logo-img" />
+      StudentSupportHub
+    </div>
+  <nav class="navbar">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mental-health.html">Mental Health</a></li>
+      <li><a href="financial.html">Financial Help</a></li>
+      <li><a href="study-tools.html">Study Tools</a></li>
+      <li><a href="#">Forums</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <input type="text" name="name" placeholder="Your name" required autocomplete="name">
+  <input type="email" name="email" placeholder="Your email" required autocomplete="email">
+  <input type="tel" name="phone" placeholder="Phone (optional)" inputmode="tel">
+<style>
+  input, select, textarea, button {
+  font-size: 1.1em;
+  padding: 14px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:active {
+  transform: scale(0.97);
+}
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #234375;
+  padding: 15px 20px;
+  color: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #1e1e1e;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+</style>
+  </nav>
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeSwitch">
+      <span class="slider round"></span>
+    </label>
+  </div>
+ 
+
+
+  <!-- Welcome Section -->
+  <header class="welcome-section"> 
+    <h1>Welcome to Student Support Hub!</h1>
+    <p>
+      We’re here to help you thrive as a student. Whether you need support for your mental health, financial guidance, or tools to boost your studies, our platform brings together trusted resources and a caring community. Explore, connect, and discover your path to success!
+    </p>
+  </header>
+
+  <!-- Highlights with Icons -->
+  <section class="highlights">
+    <div class="highlight">
+      <img src="https://cdn-icons-png.flaticon.com/512/3063/3063826.png" alt="Mental Health">
+      <h3>Mental Health</h3>
+      <p>Find resources to support your emotional wellbeing.</p>
+    </div>
+    <div class="highlight">
+      <img src="https://cdn-icons-png.flaticon.com/512/1907/1907553.png" alt="Financial Help">
+      <h3>Financial Help</h3>
+      <p>Get guidance on managing student expenses.</p>
+    </div>
+    <div class="highlight">
+      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Study Tools">
+      <h3>Study Tools</h3>
+      <p>Access tools to boost your academic performance.</p>
+    </div>
+  </section>
+
+ 
+  </section>
+</body>
+<!-- Add this section where you want the buttons to appear, e.g., below your welcome section in index.html -->
+<div class="main-buttons">
+  <button onclick="location.href='mental-health.html'">Mental Health</button>
+  <button onclick="location.href='financial-help.html'">Financial Help</button>
+  <button onclick="location.href='study-tools.html'">Study Tools</button>
+</div>
+<style>
+  .color-hint {
+  background: linear-gradient(blue, 10%, pink);
+}
+.simple-linear {
+  background: linear-gradient(blue, pink);
+}
+</style>
+  <script>
+  const images = [
+    "img1.jpg",
+    "img2.jpg",
+    "img3.jpg"
+  ];
+  let current = 0;
+  const sliderImage = document.getElementById("slider-image");
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    sliderImage.src = images[current];
+  }, 3000);
+</script>
+<section>
+  <section class="social-section">
+  <h2>🌐 Connect With Us</h2>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+    </a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+    </a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+    </a>
+    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" />
+    </a>
+  </div>
+  <footer class="footer-section">
+    <h2>📜 Terms & Conditions</h2>
+    <p> By accessing and using SudentSupporthub use the resources provided solely for educational and personal
+      development purposes.
+      Users are responsible for ensuring the accuracy of any content or advice taken from third-party links, forums, and
+      resources.
+    </p>
+    <p>
+      We do not collect personal data unless submitted voluntarily via contact or scholarship forms. Any misuse of the
+      platform will result in restricted access.
+    </p>
+  
+    <hr />
+  
+    <p class="copyright">
+      © <span id="year"></span> Student Support Hub. All rights reserved.
+      All study tools, content, and design elements are protected by copyright and may not be reproduced without written
+      permission.
+    </p>
+  </footer>
+  <body>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+  </body>
+  <script>
+        const themeSwitch = document.getElementById('themeSwitch');
+        const body = document.body;
+
+        // Apply saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+          body.classList.add('dark-mode');
+          themeSwitch.checked = true;
+        }
+
+        themeSwitch.addEventListener('change', () => {
+          body.classList.toggle('dark-mode');
+          localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+  </script>
+
+<style>
+  
+ .theme-toggle {
+  margin-left: auto;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #234781;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+</style>
+
+<style>
+ 
+.main-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+.main-buttons button {
+  background: #234375;
+  color: #eee2e2;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.main-buttons button:hover {
+  background: #2e6bd9;
+}
+</style>
+</body>
+</html>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #000000;
+  color: #f0e5e5;
+}
+.copyright {
+  text-align: center;
+  color: darkgrey;
+  font-size: small;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #28416b;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #6aa6f8, #c0e0ff);
+  color: #fff;
+}
+
+.welcome-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #eaf1fc;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  text-align: center;
+  max-width: 200px;
+}
+
+.highlight img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.highlight h3 {
+  color: #234375;
+  margin-bottom: 8px;
+}
+
+/* Slider Section */
+.slider-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.slider {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.logo-img {
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.social-section {
+  background-color: #090a0a;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.social-section h2 {
+  color: #4b7ecf;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a img {
+  width: 40px;
+  transition: transform 0.3s ease, filter 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.1);
+}
+
+/* Optional for dark mode */
+body.dark-mode .social-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .social-section h2 {
+  color: #eee;
+}
+
+body.dark-mode .social-icons a img {
+  filter: brightness(0.85);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+  }
+  .highlight {
+    margin-bottom: 30px;
+    max-width: 90vw;
+  }
+  .slider-section {
+    padding: 20px 5px;
+  }
+  .slider {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .logo-img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  .welcome-section {
+    padding: 30px 10px;
+    font-size: 1em;
+  }
+  .main-buttons {
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+  }
+  .main-buttons button {
+    width: 90vw;
+    padding: 14px 0;
+    font-size: 1em;
+  }
+  .social-icons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .slider img {
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 8px;
+  }
+}
+.section-box {
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+#videoThumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+#playerPlaceholder iframe {
+  width: 100% !important;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+body, .section-box, .video-thumb p {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .video-thumb img {
+    width: 100%;
+    height: auto;
+  }
+
+  #playerPlaceholder {
+    width: 100%;
+  }
+
+  .section-box {
+    padding: 15px;
+  }
+
+  h2, h3 {
+    font-size: 1.4em;
+  }
+
+  #flashcardOutput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flashcard {
+    width: 90%;
+  }
+
+  .video-controls button {
+    margin-bottom: 8px;
+  }
+}
+
+
+</style>

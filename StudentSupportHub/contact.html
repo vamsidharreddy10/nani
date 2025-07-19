@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Student Support Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      
+      background: #000000;
+      color: #f7f3f3;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: #4391da;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 16px 32px;
+      justify-content: space-between;
+    }
+    .navbar .logo-img {
+      height: 48px;
+      border-radius: 8px;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+    .navbar .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .navbar .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    .navbar .nav-links a:hover {
+      color: #c0e0ff;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #2c3e50;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      padding: 32px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .small-img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      color: blue;
+    }
+    .profile-info h1 {
+      margin: 0 0 8px 0;
+      font-size: 2em;
+      color: #6aa6f8;
+    }
+    .profile-info p {
+      margin: 0;
+      font-size: 1.1em;
+      color: #eee;
+    }
+    .section {
+      margin-bottom: 32px;
+    }
+    .section h2 {
+      color: #6aa6f8;
+      margin-bottom: 12px;
+    }
+    .contact-details i {
+      margin-right: 10px;
+      color: #6aa6f8;
+    }
+    .contact-details p {
+      margin: 8px 0;
+      font-size: 1.1em;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 16px 0;
+      border: none;
+      border-radius: 6px;
+      background: #34495e;
+      color: #fff;
+      font-size: 1em;
+    }
+    .contact-form button {
+      background: #6aa6f8;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #234375;
+    }
+    .reviews-section {
+      margin-top: 40px;
+    }
+    .reviews-section h2 {
+      color: #c0e0ff;
+      margin-bottom: 18px;
+    }
+    .reviews-container {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .review-card {
+      background: #34495e;
+      border-radius: 10px;
+      padding: 18px;
+      color: #fff;
+      flex: 1 1 220px;
+      min-width: 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .review-header img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    .stars {
+      color: #ffd700;
+      font-size: 1.1em;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 12px; }
+      .profile { flex-direction: column; align-items: flex-start; }
+      .reviews-container { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div>
+      <img src="logo nextgen.png" alt="Logo" class="logo-img">
+      Student Support Hub
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mental-health.html">Mental Health</a>
+      <a href="financial-help.html">Financial Help</a>
+      <a href="study-tools.html">Study Tools</a>
+      <a href="forums.html">Forums</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="profile">
+      <img src="Untitled design (1).png" alt="Profile" class="small-img">
+      <div class="profile-info">
+        <h1>I'm Vamsi Nani.</h1>
+        <p>CEO of Swastike Grops.</p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>About Me</h2>
+      <p>Mr. D.Vamsidhar Reddy, the visionary leader behind Swastik Grops, brings years of experience, passion, and innovation to our organization. With a deep understanding of industry challenges and future opportunities, our CEO is committed to driving growth, embracing innovation, and building a culture of trust and excellence. Under his leadership, the company has achieved milestones in delivering value to our customers, empowering our team, and making a meaningful impact in the community.</p>
+    </div>
+    <div class="section contact-details">
+      <h2>Contact Me</h2>
+      <p><i class="fa fa-map-marker"></i> Location: India</p>
+      <p><i class="fa fa-phone"></i> Phone: +91 9381860715</p>
+      <p><i class="fa fa-envelope"></i> Email: nanivamsi10@gmail.com</p>
+    </div>
+    <div class="section">
+      <h2>Send a Message</h2>
+      <form class="contact-form" action="#" method="post">
+        <input type="text" placeholder="Name" required name="Name">
+        <input type="email" placeholder="Email" required name="Email">
+        <input type="text" placeholder="Subject" required name="Subject">
+        <textarea placeholder="Message" required name="Message" rows="4"></textarea>
+        <button type="submit"><i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
+      </form>
+    </div>
+    <section class="reviews-section">
+      <h2>💬 What Students Are Saying</h2>
+      <div class="reviews-container">
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://i.pravatar.cc/50?img=12" alt="User" />
+            <div>
+              <h4>Sarah T.</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p>"This hub has been a lifesaver during finals. The breathing guide helped me stay grounded."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://i.pravatar.cc/50?img=8" alt="User" />
+            <div>
+              <h4>Marcus J.</h4>
+              <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p>"Financial help links were super useful. I found a grant I didn't know existed!"</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://i.pravatar.cc/50?img=5" alt="User" />
+            <div>
+              <h4>Ali R.</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p>"I shared my struggles on the forum and actually made study buddies!"</p>
+        </div>
+      </div>
+    </section>
+    <section class="review-form-section">
+  <h2>📝 Leave a Review</h2>
+  <form id="reviewForm">
+    <input type="text" id="reviewerName" placeholder="Your Name" required />
+
+    <div class="star-rating">
+      <label><input type="radio" name="rating" value="5" required /><span>⭐</span></label>
+      <label><input type="radio" name="rating" value="4" /><span>⭐</span></label>
+      <label><input type="radio" name="rating" value="3" /><span>⭐</span></label>
+      <label><input type="radio" name="rating" value="2" /><span>⭐</span></label>
+      <label><input type="radio" name="rating" value="1" /><span>⭐</span></label>
+    </div>
+
+    <textarea id="reviewText" placeholder="Your feedback..." rows="4" required></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+</section>
+<style>
+  .review-form-section {
+  background: #fff;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.review-form-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #234375;
+}
+
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#reviewForm input, #reviewForm textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#reviewForm button {
+  background: #234375;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#reviewForm button:hover {
+  background: #18305a;
+}
+
+/* Star Rating Input */
+.star-rating {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating span {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star-rating input:checked ~ span,
+.star-rating input:checked + span,
+.star-rating input:hover ~ span {
+  color: #f5b400;
+}
+
+</style>
+  </div>
+</body>
+</html>

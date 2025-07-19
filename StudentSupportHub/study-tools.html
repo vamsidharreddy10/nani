@@ -1,0 +1,139 @@
+<section class="section-box time-management">
+  <h2>⏳ Time Management Tips for Students</h2>
+
+  <ul class="tips-list">
+    <li>✅ Use the Pomodoro technique: 25 min work, 5 min break</li>
+    <li>✅ Create a weekly planner and stick to your top 3 tasks</li>
+    <li>✅ Avoid multitasking — focus on one goal at a time</li>
+    <li>✅ Batch similar tasks together (e.g. email & messages)</li>
+    <li>✅ Include sleep, meals, and short walks in your schedule</li>
+  </ul>
+
+  <div class="timetable-section">
+    <h3>🗓️ Sample Time Table</h3>
+    <img src="diary-planning.jpg" alt="Student Time Table Example" class="timetable-img">
+    <p>This is a sample time-blocked study planner. You can create one in Google Calendar, Notion, or with our
+      downloadable PDF.</p>
+  </div>
+  <a href="assets/study-planner.pdf" class="download-btn" download>📥 Download Study Planner PDF</a>
+  <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="download-btn">📅 Open Google Calendar</a>
+
+
+</section>
+<section class="section-box">
+  <h2>🧱 Create Your Own Study Timetable</h2>
+  <form id="timetableForm">
+    <input type="text" id="taskName" placeholder="Task name" required />
+    <input type="time" id="taskStart" required />
+    <input type="time" id="taskEnd" required />
+    <button type="submit">Add to Timetable</button>
+  </form>
+  <div id="timetableList"></div>
+</section>
+
+<style>
+  
+  .time-management .timetable-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.timetable-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(226, 217, 217, 0.911);
+}
+
+@media (max-width: 768px) {
+  .timetable-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .tips-list li {
+    font-size: 1em;
+  }
+}
+.download-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #234375;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.download-btn:hover {
+  background-color: #18305a;
+}
+.img-btn {
+  display: inline-block;
+  padding: auto;
+  background-color: black;
+  color: yellowgreen;
+}
+.download-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #234375;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.download-btn:hover {
+  background-color: #18305a;
+}
+#timetableForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#timetableList {
+  margin-top: 20px;
+  background: #f5faff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.timetable-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: white;
+  border-left: 4px solid #2e6bd9;
+  border-radius: 4px;
+}
+  .timetable-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  .timetable-item p {
+    margin: 5px 0;
+    color: #e2d6d6;
+  }
+
+  #timetableForm input, #timetableForm button {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+
+  #timetableForm button {
+    background-color: #2e6bd9;
+    color: white;
+    cursor: pointer;
+  }
+
+  #timetableForm button:hover {
+    background-color: #234375;
+  }
+</style>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Support Forum</title>
+</head>
+
+<body>
+    <h2>💬 Leave a Comment</h2>
+    <form id="commentForm">
+        <input type="text" id="name" placeholder="Your name (optional)" />
+        <textarea id="message" placeholder="Write your message..." required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        document.getElementById("commentForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            const res = await fetch("/api/comment", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, message })
+            });
+
+            const data = await res.json();
+            document.getElementById("response").innerText = data.message;
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
